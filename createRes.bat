@@ -1,0 +1,2 @@
+node createRes.js
+pause
