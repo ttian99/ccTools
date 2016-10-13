@@ -20,8 +20,10 @@ String.prototype.toUnixPath = function() {
 function createJson() {
 	console.log('-- start get filepath --');
 	getFilePath(dir, function(pathname) {
-		fileArr.push(pathname);
-		// console.log("fileArr = " + fileArr.toString());
+		var extname = path.extname(pathname);
+		if (extname === '.js') {
+			fileArr.push(pathname);
+		}
 	});
 	buildJson();
 }
